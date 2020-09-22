@@ -60,8 +60,8 @@ section#landing {
 	padding-top: 100px;
     text-align: center;
     color: #fff;
-    #background-image: url(../img/header.jpg);
-    background-color: green;
+    background-image: url(../img/landing-bg.jpeg);
+    /*background-color: green;*/
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -69,17 +69,39 @@ section#landing {
     -o-background-size: cover;
 }
 
+section#about {
+	background-color: #FFD5D5;
+	color: #000;
+}
+section#about #info h1 {
+	font-family: "Hiragino Mincho ProN - W3";
+	font-size: 130px;
+}
+
 section#services, section#footer {
 	min-height: 50%;
 }
 
-
 .service-box {
-    margin: 50px auto 0;
+	text-align: center;
+    margin: 50px auto;
     max-width: 400px;
 }
+
 .service-box p {
     margin-bottom: 0;
+}
+
+section#services-links a.get-started {
+	font-size: 20px;
+	padding: 10px 20px;
+    background-color: #FFD5D5;
+    color: #000;
+    text-decoration: none;
+}
+section#services-links a.get-started:hover, section#services-links a.get-started:focus {
+	background-color: grey;
+	color: #fff;
 }
 
 img {
@@ -133,7 +155,7 @@ img::-moz-selection {
     }
     
     section#landing h1 {
-        font-size: 100px;
+        font-size: 140px;
     }
     section#landing hr {
         margin-top: 20px;
@@ -142,8 +164,9 @@ img::-moz-selection {
         border-color: #fff;
         border-width: 5px;
     }
-
+	
     div#quote {
+    	font-family: "Tamil MN - Bold",Arial,sans-serif;
     	bottom: 0;
         font-size: 30px;
 		margin-top: 150px;
@@ -154,15 +177,47 @@ img::-moz-selection {
     }
     div#quote h3 {
         font-weight: 700;
-        font-size: 28px;
+        font-size: 40px;
     }
     div#quote p {
-        font-size: 25px;
+        font-size: 30px;
     }
-
+	
+	section#about .container {
+		width: 90%;
+		padding: 100px 0 0 0;
+	}
+	section#about img {
+		position: relative;
+		z-index: 10;
+	}
+	section#about .row {
+		padding: 0;
+		margin: 0;
+	}
+	section#about #desc {
+		margin: 10px 0px;
+	}
+	section#about #desc .col-md-6:first-child {
+		border-right: solid #000;
+	}
+	section#about #info {
+		margin: 50px 0 0 -100px;
+		padding: 0 0 20px 100px;
+		background-color: #fff;
+	}
+	
     #services img {
         width: 100px;
     }
+
+    section#services-links .link {
+    	margin: 50px 0;
+    }
+    section#services-links a.get-started {
+		font-size: 20px;
+		padding: 10px 20px;
+	}
 	
 	#footer img {
 		width: 200px;
