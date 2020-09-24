@@ -19,25 +19,21 @@ a {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+    text-decoration: none;
 }
 a:hover,
 a:focus {
     color: black;
+    text-decoration: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
+.h1,.h3 {
     font-family: 'Tamil MN - Regular',Arial,sans-serif;
 }
 
-::-moz-selection {
-    text-shadow: none;
+::-moz-selection, ::selection {
     color: #fff;
-    background: #222;
-}
-
-::selection {
     text-shadow: none;
-    color: #fff;
     background: #222;
 }
 
@@ -61,7 +57,6 @@ section#landing {
     text-align: center;
     color: #fff;
     background-image: url(../img/landing-bg.jpeg);
-    /*background-color: green;*/
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -70,12 +65,12 @@ section#landing {
 }
 
 section#about {
-	background-color: #FFD5D5;
 	color: #000;
+	background-color: #FFD5D5;
 }
-section#about #info h1 {
+section#about #info .h1 {
+	text-align: justify;
 	font-family: "Hiragino Mincho ProN - W3";
-	font-size: 130px;
 }
 
 section#services, section#footer {
@@ -93,15 +88,70 @@ section#services, section#footer {
 }
 
 section#services-links a.get-started {
+    color: #000;
 	font-size: 20px;
 	padding: 10px 20px;
-    background-color: #FFD5D5;
-    color: #000;
     text-decoration: none;
+    background-color: #FFD5D5;
 }
 section#services-links a.get-started:hover, section#services-links a.get-started:focus {
-	background-color: grey;
 	color: #fff;
+	background-color: grey;
+}
+
+section#whw {
+	background-image: radial-gradient(#D5FDFF, #D5FDFF, white);
+}
+section#whw .h1 {
+	margin: 0;
+	line-height: 1;
+	font-family: "Hiragino Mincho ProN - W3";
+}
+section#whw .h3 {
+	margin: 0;
+	width: 100%;
+	font-family: "Hiragino Mincho ProN - W3";
+}
+section#whw p {
+	font-family: "Helvetica Neue - Regular";
+}
+
+section#appointment {
+	color: #fff;
+	min-height: 20%;
+	font-weight: bold;
+	background-image: linear-gradient(to right, blue, pink);
+}
+section#appointment .container {
+	display: flex;
+	line-height: 2;
+	align-items: center;
+}
+section#appointment .h1 {
+	font-weight: bold;
+	font-family: "Gill sans - semibold";
+}
+section#appointment a.button {
+	border-radius: 5px;
+	background-color: #000;
+	font-family: "Tamil MN - Bold";
+}
+section#appointment a.button:hover {
+	background-color: grey;
+}
+
+#footer {
+	background-color: #7d8bdc;
+	color: #fff;
+}
+#footer hr {
+	width: 50%;
+	border-color: blue;
+}
+#footer ul {
+	padding: 0;
+	font-size: 20px;
+	list-style-type: none;
 }
 
 img {
@@ -118,9 +168,7 @@ img::-moz-selection {
 }
 
 #map {
-  width: 100%;
   height: 300px;
-  background-color: grey;
 }
 
 
@@ -154,7 +202,7 @@ img::-moz-selection {
         padding: 0 10px;
     }
     
-    section#landing h1 {
+    section#landing .h1 {
         font-size: 140px;
     }
     section#landing hr {
@@ -183,28 +231,37 @@ img::-moz-selection {
         font-size: 30px;
     }
 	
+	section#about {
+		padding-bottom: 100px;
+	}
 	section#about .container {
 		width: 90%;
 		padding: 100px 0 0 0;
 	}
 	section#about img {
 		position: relative;
+		width: 400px;
 		z-index: 10;
 	}
 	section#about .row {
-		padding: 0;
 		margin: 0;
+		padding: 0;
 	}
 	section#about #desc {
+		padding: 0px;
 		margin: 10px 0px;
 	}
 	section#about #desc .col-md-6:first-child {
 		border-right: solid #000;
 	}
 	section#about #info {
+		text-align: justify;
 		margin: 50px 0 0 -100px;
 		padding: 0 0 20px 100px;
 		background-color: #fff;
+	}
+	section#about #info .h1 {
+		font-size: 120px;
 	}
 	
     #services img {
@@ -217,8 +274,51 @@ img::-moz-selection {
     section#services-links a.get-started {
 		font-size: 20px;
 		padding: 10px 20px;
+		border-radius: 5px;
 	}
-	
+
+	section#whw .col-md-7 {
+	    padding: 20px;
+	}
+	section#whw .h1 {
+		font-size: 150px;
+	}
+	section#whw .h3 {
+		font-size: 35px;
+	}
+	section#whw p {
+		font-size: 20px;
+	}
+	section#appointment .container {
+		height: 200px;
+	}
+	section#appointment .h1 {
+		line-height: 1.5;
+        font-size: 40px;
+	}
+	section#appointment a.button {
+		padding: 15px 25px;
+		font-size: 30px;
+	}
+    
+    #footer {
+    	padding: 20px 0;
+    }
+    #footer hr {
+    	margin: 10px 0;
+    	width: 50%;
+    }
+    #footer ul {
+    	font-size: 20px;
+    }
+    #footer .h1{
+    	font-size: 30px;
+    }
 	#footer img {
+		margin: 30px 0;
 		width: 200px;
+	}
+	#footer #map {
+		margin-top: 50px;
+	}
 }

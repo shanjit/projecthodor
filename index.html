@@ -64,7 +64,7 @@
 	</nav>
     <section id="landing">
 		<div class="container">
-			<h1>Sapratyaya</h1>
+			<div class="h1">Sapratyaya</div>
 			<hr>
 			<nav id="secondaryNav" class="navbar">
 				<ul class="nav navbar-nav">
@@ -104,7 +104,7 @@
 				</div>
 				<div class="col-md-8" id="info">
 					<div class="row">
-						<div class="col-md-12"><h1>Deep Jajmann</h1></div>
+						<div class="col-md-12"><div class="h1">Deep Jajmann</div></div>
 					</div>
 					<div class="row" id="desc">
 						<div class="col-md-6">
@@ -166,16 +166,16 @@
                     <img src="img/psychometric.jpg" alt="Psychometric Testing" />
                 </div>
                 <div class="col-md-6 link">
-                    <h1>Psychometric Testing</h1>
+                    <div class="h1">Psychometric Testing</div>
 					<p>Understand your potential, characteristics and cognitive abilities for targetted self-development</p>					
-					<a class="get-started">Get Started</a>
+					<a href="#" class="get-started">Get Started</a>
 				</div>
 			</div>
 			<div class="row">
                 <div class="col-md-6 link">
-					<h1>Counselling & Therapy</h1>
+					<div class="h1">Counselling & Therapy</div>
 					<p>Seek help for various emotional problems & behavioural disorders</p>
-					<a class="get-started">Get Started</a>
+					<a href="#" class="get-started">Get Started</a>
 				</div>
                 <div class="col-md-6">
                     <img src="img/therapy.jpg" alt="Therapy & Counselling" />
@@ -188,8 +188,8 @@
 		<div class="container">
             <div class="row">
 				<div class="col-md-5">
-					<h1>WHO</h1>
-					<h3>Needs Counselling?</h3>
+					<div class="h1">WHO</div>
+					<div class="h3">Needs Counselling?</div>
 				</div>
 				<div class="col-md-7">
 					<p>Counselling is NOT for crazies, it never was.</p>
@@ -198,8 +198,8 @@
 			</div>
             <div class="row">
 				<div class="col-md-5">
-					<h1>HOW</h1>
-					<h3>Does it help?</h3>
+					<div class="h1">HOW</div>
+					<div class="h3">Does it help?</div>
 				</div>
 				<div class="col-md-7">
 					<p>Counselling provides confidential support.</p>
@@ -208,8 +208,8 @@
 			</div>
             <div class="row">
 				<div class="col-md-5">
-					<h1>WHY</h1>
-					<h3>Do You Need Counselling?</h3>
+					<div class="h1">WHY</div>
+					<div class="h3">Do You Need Counselling?</div>
 				</div>
 				<div class="col-md-7">
 					<p>It can help with positive events such as choosing a direction in life or reaching your full potential. Perhraps you are feeling a 'bit stuck' and would value the viewpoint of a counsellor.</p>
@@ -222,7 +222,16 @@
 	<section id="steps">
 		How to do!
 	</section>
-	
+
+	<section id="appointment">
+		<div class="container">
+				<div class="h1 col-md-8">Schedule a personal counselling session now! Help us, help YOU!</div>
+				<div class="col-md-4">
+					<a class="button" href="#">Book an Appointment</a>
+				</div>
+		</div>
+	</section>
+
     <section id="testimonials">
         <div class="container">
             <div class="row">
@@ -272,6 +281,7 @@
         </div>
     </section>
 
+
     <!--
     <section id="contact"  style="background-color: #f2f2f2;">
         <div class="container">
@@ -293,65 +303,74 @@
     <section id="footer">
         <div class="container">
 			<div class="row">
-				<div class="col-sm-4">
-					<img src="img/Logo.jpg" alt="Sapratyaya Logo" />
-					<h1>Services</h1>
-					<hr>
-					<ul>
-						<li><a href="#psychometric">Psychometric Testing</a></li>
-						<li><a href="#therapy">Counselling & Therapy</a></li>
-						<li><a href="#">Study Abroad</a></li>
-					</ul>
-                </div>
+			<div class="col-sm-8">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="img/Logo.jpg" alt="Sapratyaya Logo" />
+						</div>
+						<div class="col-sm-6">
+							<div class="h1">Contact Details</div>
+							<hr>
+							<ul>
+								<li>+91-9868155250</li>
+								<li><a href="mailto:sapratyaya@gmail.com">sapratyaya[at]gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="h1">Services</div>
+							<hr>
+							<ul>
+								<li><a href="#psychometric">Psychometric Testing</a></li>
+								<li><a href="#therapy">Counselling & Therapy</a></li>
+								<li><a href="#">Study Abroad</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-6">
+							<div class="h1">Address</div>
+							<hr>
+							<ul>
+								<li>Celestial Heights</li>
+								<li>Sector 2, Dwarka</li>
+								<li>New Delhi</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
                 <div class="col-sm-4">
-					<h1>Contact Details</h1>
-					<hr>
-					<ul>
-						<li>+91-9868155250</li>
-						<li><a href="mailto:sapratyaya@gmail.com">sapratyaya[at]gmail.com</a></li>
-					</ul>
+					<div id="map"></div>
+						<script>
+						  function initMap() {
+							var uluru = {lat: 28.5970757, lng: 77.0665557};
+							var map = new google.maps.Map(document.getElementById('map'), {
+							  zoom: 13,
+							  center: uluru
+							});
 					
-					<h1>Address</h1>
-					<hr>
-					<ul>
-						<li>Celestial Heights</li>
-						<li>Sector 2, Dwarka</li>
-						<li>New Delhi</li>
-					</ul>
-                </div>
-                <div class="col-sm-4">
-                <div id="map"></div>
-                    <script>
-                      function initMap() {
-                        var uluru = {lat: 28.5970757, lng: 77.0665557};
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                          zoom: 13,
-                          center: uluru
-                        });
-                
-                        var contentString = '<div id="content">'+
-                            '<div id="siteNotice">'+
-                            '</div>'+
-                            '<h5 id="firstHeading" class="firstHeading">Celestial Heights</h5>'+
-                            '</div>';
+							var contentString = '<div id="content">'+
+								'<div id="siteNotice">'+
+								'</div>'+
+								'<h5 id="firstHeading" class="firstHeading">Celestial Heights</h5>'+
+								'</div>';
 
-                        var infowindow = new google.maps.InfoWindow({
-                          content: contentString
-                        });
+							var infowindow = new google.maps.InfoWindow({
+							  content: contentString
+							});
 
-                        var marker = new google.maps.Marker({
-                          position: uluru,
-                          map: map
-                        });
+							var marker = new google.maps.Marker({
+							  position: uluru,
+							  map: map
+							});
 
-                          infowindow.open(map, marker);
-                    
-                      }
-                </script>
-                <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArbKLref6xTHHlcPJ_00YdB9XYgr-z5I4&callback=initMap">
-                </script>
-                </div>
+							  infowindow.open(map, marker);
+						
+						  }
+						</script>
+						<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArbKLref6xTHHlcPJ_00YdB9XYgr-z5I4&callback=initMap">
+						</script>
+					</div>
 			</div>
         </div>
     </section>
