@@ -15,7 +15,16 @@
         }, 1250, 'easeInOutExpo');
         event.preventDefault();
     });
-
+	
+	//
+	
+	$(function () {
+	  $(document).scroll(function () {
+		  var $nav = $(".navbar-fixed-top");
+		  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+		});
+	});
+  
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
