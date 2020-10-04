@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 html,
 body {
     width: 100%;
@@ -24,6 +18,19 @@ a:hover,
 a:focus {
     color: black;
     text-decoration: none;
+}
+
+a.get-started {
+    color: #000;
+	font-size: 20px;
+	padding: 20px 30px;
+    text-decoration: none;
+	border-radius: 5px;
+    background-color: #FFD5D5;
+}
+a.get-started:hover, a.get-started:focus {
+	color: #fff;
+	background-color: grey;
 }
 
 .h1,.h3 {
@@ -47,14 +54,14 @@ nav {
 }
 
 section {
-    min-height: 100%;
     width: 100%;
 }
 
 section#landing {
-	padding-top: 100px;
-    text-align: center;
+    height: 100%;
     color: #fff;
+    text-align: center;
+	padding-top: 100px;
     background-image: url(../img/landing-bg.jpeg);
     background-position: center;
     -webkit-background-size: cover;
@@ -63,22 +70,24 @@ section#landing {
     -o-background-size: cover;
 }
 
+section#tests-landing {
+	background-image: url(../img/tests.jpeg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
 section#about {
 	color: #000;
-	background-color: #FFD5D5;
-	background-image: linear-gradient(to bottom, #ffd5d5, #ffd3d3);
+	background-color: rgba(255, 213, 213, 0.3);
+	background-image: linear-gradient(to bottom, rgba(255, 213, 213, 1), transparent);
 }
 section#about #info .h1 {
 	text-align: justify;
 	font-family: "Hiragino Mincho ProN - W3";
 }
 
-section#services, section#footer {
-	min-height: 50%;
-}
-
 section#services {
-	background-image: linear-gradient(to bottom, #FFD5D5, white, white);
+	background-image: linear-gradient(to bottom, rgba(255, 213, 213, 0.3), white, white);
 }
 section#services .container {
 	border-radius: 10px;
@@ -100,26 +109,18 @@ section#services img {
 	margin: auto;
 	transform: rotate(-45deg);
 }
-.services-box {
+section#services .services-box {
 	text-align: center;
     margin: 0px auto;
     max-width: 400px;
 }
 
-section#services-links a.get-started {
-    color: #000;
-	font-size: 20px;
-	padding: 10px 20px;
-    text-decoration: none;
-    background-color: #FFD5D5;
-}
-section#services-links a.get-started:hover, section#services-links a.get-started:focus {
-	color: #fff;
-	background-color: grey;
+section#services-links img {
+	width: 100%;
 }
 
 section#whw {
-	background-image: radial-gradient(#D5FDFF, #D5FDFF, white);
+	background-image: radial-gradient(#d5fdff, white);
 }
 section#whw .h1 {
 	margin: 0;
@@ -137,16 +138,21 @@ section#whw p {
 
 section#appointment {
 	color: #fff;
-	min-height: 20%;
+	display: flex;
+	justify-content: center;
 	font-weight: bold;
-	background-image: linear-gradient(to right, blue, pink);
+	background-image: linear-gradient(to right, #6C63FF, #FFD5D5);
 }
 section#appointment .container {
+	width: 90%;
 	display: flex;
 	line-height: 2;
 	align-items: center;
+	text-align: right;
 }
 section#appointment .h1 {
+	padding: 0 2%;
+	text-align: left;
 	font-weight: bold;
 	font-family: "Gill sans - semibold";
 }
@@ -157,6 +163,23 @@ section#appointment a.button {
 }
 section#appointment a.button:hover {
 	background-color: grey;
+}
+
+/* Page 2 */
+section#tests-landing {
+    height: 100%;
+}
+
+section#psychometric-about {
+	text-align: center;
+}
+
+section#admissions-about {
+	text-align: center;
+}
+
+section#contact iframe {
+	width: 100%;
 }
 
 #footer {
@@ -175,9 +198,6 @@ section#appointment a.button:hover {
 	list-style-type: none;
 }
 
-img {
-    max-width: 400px;
-}
 img::selection {
     color: #fff;
     background: 0 0;
@@ -272,33 +292,51 @@ img::-moz-selection {
 		margin: 0;
 		padding: 0;
 	}
-	section#about #desc {
-		padding: 0px;
-		margin: 10px 0px;
-	}
-	section#about #desc .col-md-6:first-child {
-		border-right: solid #000;
-	}
 	section#about #info {
 		text-align: justify;
-		margin: 50px 0 0 -100px;
-		padding: 0 0 20px 100px;
+		margin: 50px 0 0 -10%;
+		padding: 0 0 20px 10%;
 		background-color: #fff;
 	}
 	section#about #info .h1 {
 		font-size: 120px;
 	}
+	section#about #info p {
+		padding: 0 10px;
+	}
+	section#about #desc {
+		margin: 10px 0px;
+	}
+	section#about #desc .col-md-6:first-child {
+		padding-left: 0;
+		border-right: solid #000;
+	}
 
     section#services {
-	    padding-top: 100px;
+	    padding-top: 50px;
+    }
+	section#services .container {
+		width: 90%;
+	}
+
+	section#services-links {
+		margin-top: 100px;
+		margin-bottom: 50px;
+	}
+    section#services-links .row {
+    	display: flex;
     }
     section#services-links .link {
-    	margin: 50px 0;
+        margin: auto 0;
+        padding: 0 50px;
     }
+    section#services-links p {
+    	margin-top: 30px;
+    	margin-bottom: 50px;
+	}
     section#services-links a.get-started {
-		font-size: 20px;
-		padding: 10px 20px;
-		border-radius: 5px;
+		margin-top: 50px;
+		padding: 15px 30px;
 	}
 
     section#whw .row {
@@ -316,18 +354,75 @@ img::-moz-selection {
 	section#whw p {
 		font-size: 20px;
 	}
-	section#appointment .container {
-		height: 200px;
+
+	section#howitworks {
+		margin-top: 100px;
 	}
+	section#howitworks img {
+		width: 100%;
+	}
+
+    section#appointment {
+    	margin: 100px 0;
+    	padding: 50px 0;
+    }
 	section#appointment .h1 {
-		line-height: 1.5;
         font-size: 40px;
+		line-height: 1.5;
 	}
 	section#appointment a.button {
-		padding: 15px 25px;
 		font-size: 30px;
+		padding: 15px 25px;
 	}
     
+    /* Page 2 */
+    section#psychometric-about {
+		padding-top: 50px;
+		background-image: linear-gradient(to bottom, rgba(214, 253, 255, 0.6), white);
+	}
+    section#psychometric-about .h1 {
+    	font-size: 50px;
+    }
+    section#psychometric-about p:first-child {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    section#psychometric-about .h3 {
+    	margin-top: 50px;
+    	font-size: 40px;
+    }
+    section#psychometric-about p {
+    	font-size: 25px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+	section#admissions-about {
+		margin-top: 50px;
+	}
+	section#admissions-about .h1 {
+    	font-size: 50px;
+	}
+	section#admissions-about p {
+    	font-size: 25px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+	}
+	section#admissions-about .h3 {
+    	margin-top: 50px;
+    	font-size: 40px;
+	}
+	section#admissions-about ul {
+    	margin-top: 30px;
+    	margin-bottom: 50px;
+    	font-size: 30px;
+    	font-weight: bold;
+        display: flex;
+        flex-direction: row;
+	    list-style-type: none;
+        justify-content: space-between;
+	}
+
     #footer {
     	padding: 20px 0;
     }
