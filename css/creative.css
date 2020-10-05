@@ -27,6 +27,7 @@ a.get-started {
     text-decoration: none;
 	border-radius: 5px;
     background-color: #FFD5D5;
+    font-family: 'Tamil MN - Regular',Arial,sans-serif;
 }
 a.get-started:hover, a.get-started:focus {
 	color: #fff;
@@ -172,10 +173,25 @@ section#tests-landing {
 
 section#psychometric-about {
 	text-align: center;
+	font-family: "Helvetica Neue - Regular";
+}
+section#psychometric-about .h1 {
+	font-family: "Hiragino Mincho ProN - W3";
+}
+section#psychometric-about .h3 {
+	font-family: "Helvetica Neue - Regular";
 }
 
 section#admissions-about {
 	text-align: center;
+}
+section#admissions-about ul {
+	font-weight: bold;
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	justify-content: space-between;
+    font-family: "Hiragino Mincho ProN - W6";
 }
 
 section#contact iframe {
@@ -364,10 +380,10 @@ img::-moz-selection {
 
     section#appointment {
     	margin: 100px 0;
-    	padding: 50px 0;
+    	padding: 20px 0;
     }
 	section#appointment .h1 {
-        font-size: 40px;
+        font-size: 50px;
 		line-height: 1.5;
 	}
 	section#appointment a.button {
@@ -416,11 +432,6 @@ img::-moz-selection {
     	margin-top: 30px;
     	margin-bottom: 50px;
     	font-size: 30px;
-    	font-weight: bold;
-        display: flex;
-        flex-direction: row;
-	    list-style-type: none;
-        justify-content: space-between;
 	}
 
     #footer {
