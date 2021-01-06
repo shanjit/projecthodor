@@ -162,7 +162,8 @@ section#appointment a.button {
 	background-color: #000;
 	font-family: "Tamil MN - Bold";
 }
-section#appointment a.button:hover {
+section#appointment a.button:hover, section#appointment a.button:focus {
+	color: #fff;
 	background-color: grey;
 }
 
