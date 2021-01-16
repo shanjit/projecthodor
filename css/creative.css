@@ -8,7 +8,6 @@ body {
 }
 
 a {
-    color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -16,7 +15,6 @@ a {
 }
 a:hover,
 a:focus {
-    color: black;
     text-decoration: none;
 }
 
@@ -53,6 +51,19 @@ p {
 nav {
     max-height: 100px;
 }
+nav#mainNav a {
+	color: black;
+}
+nav#mainNav.scrolled {
+	background-color: #000;
+	transition: background-color 200ms linear;
+}
+nav#mainNav.scrolled a {
+	color: #fff;
+}
+nav#mainNav.scrolled a:hover, nav#mainNav.scrolled a:focus {
+	color: black;
+}
 
 section {
     width: 100%;
@@ -60,15 +71,24 @@ section {
 
 section#landing {
     height: 100%;
-    color: #fff;
     text-align: center;
 	padding-top: 100px;
-    background-image: url(../img/landing-bg.jpeg);
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+}
+section#landing::after {
+	content: "";
+	background-image: url(../img/landing.png);
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	opacity: 0.7;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
 }
 
 section#tests-landing {
@@ -157,6 +177,9 @@ section#appointment .h1 {
 	font-weight: bold;
 	font-family: "Gill sans - semibold";
 }
+section#appointment a {
+	color: #fff;
+}
 section#appointment a.button {
 	border-radius: 5px;
 	background-color: #000;
@@ -168,6 +191,24 @@ section#appointment a.button:hover, section#appointment a.button:focus {
 }
 
 /* Page 2 */
+#tests-page-top #mainNav a {
+	color: #fff;
+}
+#tests-page-top nav#mainNav a:hover, nav#mainNav a:focus {
+	color: black;
+}
+#tests-page-top nav#mainNav.scrolled {
+	background-color: #000;
+	transition: background-color 200ms linear;
+}
+#tests-page-top nav#mainNav.scrolled a {
+	color: #fff;
+}
+#tests-page-top nav#mainNav.scrolled a:hover, nav#mainNav.scrolled a:focus {
+	color: black;
+}
+
+
 section#tests-landing {
     height: 100%;
 }
@@ -203,6 +244,12 @@ section#contact iframe {
 	background-color: #7082d5;
 	color: #fff;
 }
+#footer a {
+	color: #fff;
+}
+#footer a:hover, #footer a:focus {
+	color: black;
+}
 #footer hr {
 	border-color: blue;
 }
@@ -231,13 +278,8 @@ img::-moz-selection {
 
 
 @media(min-width:768px) {
-	nav#mainNav.scrolled {
-		background-color: #000;
-		transition: background-color 200ms linear;
-	}
     nav#mainNav {
 		padding: 20px 50px;
-		color: #fff;
 	}
 
     nav#mainNav ul {
@@ -263,6 +305,9 @@ img::-moz-selection {
     nav#secondaryNav li {
         padding: 0 10px;
     }
+    nav#secondaryNav a {
+    	color: black;
+    }
     
     section#landing .h1 {
         font-size: 140px;
@@ -271,14 +316,13 @@ img::-moz-selection {
         margin-top: 20px;
         margin-bottom: 0;
         width: 100%;
-        border-color: #fff;
+        border-color: black;
         border-width: 5px;
     }
 	
     div#quote {
     	font-family: "Tamil MN - Bold",Arial,sans-serif;
     	bottom: 0;
-        font-size: 30px;
 		margin-top: 150px;
     }
     div#quote hr {
@@ -287,10 +331,10 @@ img::-moz-selection {
     }
     div#quote h3 {
         font-weight: 700;
-        font-size: 40px;
+        font-size: 35px;
     }
     div#quote p {
-        font-size: 30px;
+        font-size: 25px;
     }
 	
 	section#about {
