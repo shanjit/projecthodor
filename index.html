@@ -243,7 +243,7 @@
             <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 			<div class="elfsight-app-4987f20a-696e-4807-9fcc-28811c46da31"></div>
         </div>
-    </section>
+	</section>
 
     <section id="footer">
         <div class="container">
@@ -251,7 +251,7 @@
 			<div class="col-sm-8">
 					<div class="row">
 						<div class="col-sm-6">
-							<img src="img/Logo.jpg" alt="Sapratyaya Logo" />
+							<img src="img/Logo.jpg" width="50%" height="50%" align="center" alt="Sapratyaya Logo" />
 						</div>
 						<div class="col-sm-6">
 							<div class="h1">Services</div>
@@ -269,7 +269,7 @@
 							<hr>
 							<ul>
 								<li>+91-9868155250</li>
-								<li><a href="mailto:sapratyaya@gmail.com">sapratyaya[at]gmail.com</a></li>
+								<li><a href="mailto:deep@sapratyaya.com">deep@sapratyaya.com</a></li>
 							</ul>
 						</div>
 						<div class="col-sm-6">
@@ -284,38 +284,9 @@
 					</div>
 
 				</div>
-                <div class="col-sm-4">
-					<div id="map"></div>
-						<script>
-						  function initMap() {
-							var uluru = {lat: 28.5970757, lng: 77.0665557};
-							var map = new google.maps.Map(document.getElementById('map'), {
-							  zoom: 13,
-							  center: uluru
-							});
-					
-							var contentString = '<div id="content">'+
-								'<div id="siteNotice">'+
-								'</div>'+
-								'<h5 id="firstHeading" class="firstHeading">Celestial Heights</h5>'+
-								'</div>';
-
-							var infowindow = new google.maps.InfoWindow({
-							  content: contentString
-							});
-
-							var marker = new google.maps.Marker({
-							  position: uluru,
-							  map: map
-							});
-
-							  infowindow.open(map, marker);
-						
-						  }
-						</script>
-						<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArbKLref6xTHHlcPJ_00YdB9XYgr-z5I4&callback=initMap">
-						</script>
-					</div>
+						<div class="col-sm-4">
+								<iframe class="embed-responsive-item" width="300" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=Celestial%20Heights,%20Dwarka,%20Sector%202,%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>	
+						</div>
 			</div>
         </div>
     </section>
