@@ -183,6 +183,12 @@ footer {
   bottom:50px;
 }
 
+@media (min-width: 768px)
+.navbar-default {
+    border: 0;
+    background-color: transparent;
+}
+
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {

@@ -1,48 +1,45 @@
-/*!
- * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 html,
 body {
     width: 100%;
     height: 100%;
-}
-
-body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
-}
-
-hr {
-    max-width: 50px;
-    border-color: #71b6f2;
-    border-width: 3px;
-}
-
-hr.light {
-    border-color: #fff;
+    font-size: 25px;
+    font-family: 'Tamil MN - Regular',Arial,sans-serif;
+    webkit-tap-highlight-color: #222;
 }
 
 a {
-    color: #71b6f2;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+    text-decoration: none;
 }
-
 a:hover,
 a:focus {
-    color: #23527c;
+    text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+a.get-started {
+    color: #000;
+	font-size: 20px;
+	padding: 20px 30px;
+    text-decoration: none;
+	border-radius: 5px;
+    background-color: #FFD5D5;
+    font-family: 'Tamil MN - Regular',Arial,sans-serif;
+}
+a.get-started:hover, a.get-started:focus {
+	color: #fff;
+	background-color: grey;
+}
+
+.h1,.h3 {
+    font-family: 'Tamil MN - Regular',Arial,sans-serif;
+}
+
+::-moz-selection, ::selection {
+    color: #fff;
+    text-shadow: none;
+    background: #222;
 }
 
 p {
@@ -51,404 +48,192 @@ p {
     line-height: 1.5;
 }
 
-.bg-primary {
-    background-color: #71b6f2;
+.navbar-toggle {
+	float: left;
+	margin-left: 15px;
+    border: #333 solid;
 }
-
-.bg-dark {
-    color: #fff;
-    background-color: #222;
-}
-
-.text-faded {
-    color: rgba(255,255,255,.7);
+.navbar-toggle .icon-bar {
+    background-color: #333;
 }
 
 section {
-    padding: 100px 0;
+    width: 100%;
 }
 
-aside {
-    padding: 50px 0;
+section#landing {
+    text-align: center;
+}
+section#landing::after {
+	content: "";
+	background-image: url(../img/landing.png);
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	opacity: 0.7;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
 }
 
-.no-padding {
-    padding: 0;
+section#tests-landing {
+	background-image: url(../img/tests.jpeg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 
-.navbar-default {
-    border-color: rgba(34,34,34,.05);
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+section#about {
+	padding-bottom: 100px;
+	color: #000;
+	background-color: rgba(255, 213, 213, 0.3);
+	background-image: linear-gradient(to bottom, rgba(255, 213, 213, 1), transparent);
+}
+section#about #info .h1 {
+	text-align: justify;
+	font-family: "Hiragino Mincho ProN - W3";
+}
+
+section#services {
+	background-image: linear-gradient(to bottom, rgba(255, 213, 213, 0.3), white, white);
+}
+section#services .container {
+	border-radius: 10px;
+	box-shadow: 0 5px 5px #aaaaaa;
+}
+section#services .services-image {
+	display: flex;
+    width: 141px;
+    height: 141px;
+	align-items: center;
+    margin: 0 auto 40px auto;
+    transform: rotate(45deg);
+    box-shadow: 1px 1px 3px #aaaaaa;
     background-color: #fff;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
 }
-
-.navbar-default .navbar-header .navbar-brand {
-    text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    font-weight: 700;
-    color: #C:SERSSSJAJMANDOCUMENTS	EMPARNALYSISMINITABS;
+section#services img {
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	transform: rotate(-45deg);
 }
-
-.navbar-default .navbar-header .navbar-brand:hover,
-.navbar-default .navbar-header .navbar-brand:focus {
-    color: #eb3812;
-}
-
-.navbar-default .nav > li>a,
-.navbar-default .nav>li>a:focus {
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 700;
-    color: #222;
-}
-
-.navbar-default .nav > li>a:hover,
-.navbar-default .nav>li>a:focus:hover {
-    color: #71b6f2;
-}
-
-.navbar-default .nav > li.active>a,
-.navbar-default .nav>li.active>a:focus {
-    color: #71b6f2!important;
-    background-color: transparent;
-}
-
-.navbar-default .nav > li.active>a:hover,
-.navbar-default .nav>li.active>a:focus:hover {
-    background-color: transparent;
-}
-
-@media(min-width:768px) {
-    .navbar-default {
-        border-color: rgba(255,255,255,.3);
-        background-color: transparent;
-    }
-
-    .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
-    }
-
-    .navbar-default .navbar-header .navbar-brand:hover,
-    .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
-    }
-
-    .navbar-default .nav > li>a,
-    .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
-    }
-
-    .navbar-default .nav > li>a:hover,
-    .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
-    }
-
-    .navbar-default.affix {
-        border-color: rgba(34,34,34,.05);
-        background-color: #fff;
-    }
-
-    .navbar-default.affix .navbar-header .navbar-brand {
-        font-size: 14px;
-        color: #71b6f2;
-    }
-
-    .navbar-default.affix .navbar-header .navbar-brand:hover,
-    .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #eb3812;
-    }
-
-    .navbar-default.affix .nav > li>a,
-    .navbar-default.affix .nav>li>a:focus {
-        color: #222;
-    }
-
-    .navbar-default.affix .nav > li>a:hover,
-    .navbar-default.affix .nav>li>a:focus:hover {
-        color: #71b6f2;
-    }
-}
-
-header {
-    position: relative;
-    width: 100%;
-    min-height: auto;
-    text-align: center;
-    color: #fff;
-    background-image: url(../img/header.jpg);
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-header .header-content {
-    position: relative;
-    width: 100%;
-    padding: 100px 15px;
-    text-align: center;
-}
-
-header .header-content .carousel-content {
-    color:black;
-    display:flex;
-    align-items:center;
-    font-size: 100px;
-}
-
-
-header #text-carousel {
-  width: 100%;
-  height: auto;
-  padding: 50px;
-}
-
-@media(min-width:768px) {
-    header {
-        min-height: 100%;
-    }
-
-    header .header-content {
-        position: absolute;
-        top: 50%;
-        padding: 0 50px;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-
-    header .header-content .header-content-inner {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 1000px;
-    }
-
-}
-
-.section-heading {
-    margin-top: 0;
-}
-
-.service-box {
-    margin: 50px auto 0;
+section#services .services-box {
+	text-align: center;
+    margin: 0px auto;
     max-width: 400px;
 }
 
-@media(min-width:992px) {
-    .service-box {
-        margin: 20px auto 0;
-    }
+section#services-links img {
+	width: 100%;
 }
 
-.service-box p {
-    margin-bottom: 0;
+section#whw {
+	background-image: radial-gradient(#d5fdff, white);
+}
+section#whw .h1 {
+	margin: 0;
+	line-height: 1;
+	font-family: "Hiragino Mincho ProN - W3";
+}
+section#whw .h3 {
+	margin: 0;
+	width: 100%;
+	font-family: "Hiragino Mincho ProN - W3";
+}
+section#whw p {
+	font-family: "Helvetica Neue - Regular";
 }
 
-.portfolio-box {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    max-width: 650px;
+section#appointment {
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	background-image: linear-gradient(to right, #6C63FF, #FFD5D5);
+}
+section#appointment .container {
+	width: 90%;
+	display: flex;
+	line-height: 2;
+	align-items: center;
+	text-align: right;
+}
+section#appointment .h1 {
+	padding: 0 2%;
+	text-align: left;
+	font-weight: bold;
+	font-family: "Gill sans - semibold";
+}
+section#appointment a {
+	color: #fff;
+}
+section#appointment a.button {
+	border-radius: 5px;
+	background-color: #000;
+	font-family: "Tamil MN - Bold";
+}
+section#appointment a.button:hover, section#appointment a.button:focus {
+	color: #fff;
+	background-color: grey;
 }
 
-.portfolio-box .portfolio-box-caption {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+/* Page 2 */
+section#psychometric-about {
+	background-image: linear-gradient(to bottom, rgba(214, 253, 255, 0.6), white);
+}
+
+section#tests-landing {
     height: 100%;
-    text-align: center;
-    color: #fff;
-    opacity: 0;
-    background: #23527c;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translateY(-50%);
+section#psychometric-about {
+	text-align: center;
+	font-family: "Helvetica Neue - Regular";
+}
+section#psychometric-about .h1 {
+	font-family: "Hiragino Mincho ProN - W3";
+}
+section#psychometric-about .h3 {
+	font-family: "Helvetica Neue - Regular";
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+section#admissions-about {
+	text-align: center;
+}
+section#admissions-about ul {
+	font-weight: bold;
+	list-style-type: none;
+    font-family: "Hiragino Mincho ProN - W6";
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
+section#contact iframe {
+	width: 100%;
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 18px;
+#footer {
+	background-color: #7082d5;
+	color: #fff;
 }
-
-.portfolio-box:hover .portfolio-box-caption {
-    opacity: 1;
+#footer a {
+	color: #fff;
 }
-
-@media(min-width:768px) {
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-        font-size: 16px;
-    }
-
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-        font-size: 22px;
-    }
+#footer a:hover, #footer a:focus {
+	color: black;
 }
-
-.call-to-action h2 {
-    margin: 0 auto 20px;
+#footer hr {
+	border-color: blue;
 }
-
-.text-primary {
-    color: #71b6f2;
+#footer .h1{
+	font-family: "Hiragino Mincho ProN - W3";
 }
-
-.no-gutter > [class*=col-] {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.btn-default {
-    border-color: #fff;
-    color: #222;
-    background-color: #fff;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.btn-default:hover,
-.btn-default:focus,
-.btn-default.focus,
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-    border-color: #ededed;
-    color: #222;
-    background-color: #f2f2f2;
-}
-
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-    background-image: none;
-}
-
-.btn-default.disabled,
-.btn-default[disabled],
-fieldset[disabled] .btn-default,
-.btn-default.disabled:hover,
-.btn-default[disabled]:hover,
-fieldset[disabled] .btn-default:hover,
-.btn-default.disabled:focus,
-.btn-default[disabled]:focus,
-fieldset[disabled] .btn-default:focus,
-.btn-default.disabled.focus,
-.btn-default[disabled].focus,
-fieldset[disabled] .btn-default.focus,
-.btn-default.disabled:active,
-.btn-default[disabled]:active,
-fieldset[disabled] .btn-default:active,
-.btn-default.disabled.active,
-.btn-default[disabled].active,
-fieldset[disabled] .btn-default.active {
-    border-color: #fff;
-    background-color: #fff;
-}
-
-.btn-default .badge {
-    color: #fff;
-    background-color: #222;
-}
-
-.btn-primary {
-    border-color: #71b6f2;
-    color: #fff;
-    background-color: #71b6f2;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary.focus,
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-    border-color: #ed431f;
-    color: #fff;
-    background-color: #ee4b28;
-}
-
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-    background-image: none;
-}
-
-.btn-primary.disabled,
-.btn-primary[disabled],
-fieldset[disabled] .btn-primary,
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled.focus,
-.btn-primary[disabled].focus,
-fieldset[disabled] .btn-primary.focus,
-.btn-primary.disabled:active,
-.btn-primary[disabled]:active,
-fieldset[disabled] .btn-primary:active,
-.btn-primary.disabled.active,
-.btn-primary[disabled].active,
-fieldset[disabled] .btn-primary.active {
-    border-color: #71b6f2;
-    background-color: #71b6f2;
-}
-
-.btn-primary .badge {
-    color: #71b6f2;
-    background-color: #fff;
-}
-
-.btn {
-    border: 0;
-    border-radius: 300px;
-    text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    font-weight: 700;
-}
-
-.btn-xl {
-    padding: 15px 30px;
-}
-
-::-moz-selection {
-    text-shadow: none;
-    color: #fff;
-    background: #222;
-}
-
-::selection {
-    text-shadow: none;
-    color: #fff;
-    background: #222;
+#footer ul {
+	padding: 0;
+	font-family: "Tamil MN - Regular";
+	list-style-type: none;
 }
 
 img::selection {
@@ -461,12 +246,407 @@ img::-moz-selection {
     background: 0 0;
 }
 
-body {
-    webkit-tap-highlight-color: #222;
+#map {
+  height: 300px;
 }
 
-#map {
-  width: 100%;
-  height: 300px;
-  background-color: grey;
+@media(max-width:768px) {
+	nav {
+		max-height: 50px;
+	}
+	nav#mainNav {
+		background-color: #fff;
+		border-bottom: #000 solid;
+	}
+	#navbar-collapse-1 {
+        background-color: #333;
+        width: 90%;
+        text-align: center;
+	}
+	#navbar-collapse-1 a {
+		color: #fff;
+	}
+	#navbar-collapse-1 li {
+		border-bottom: white solid;
+	}
+	#navbar-collapse-1 li:last-child {
+		border-bottom: none;
+	}
+
+	section .container {
+		width: 90%;
+	}
+	section#landing {
+		padding: 50px 0;
+	}
+    section#landing .h1 {
+        font-size: 140%;
+    }
+    section#landing hr {
+        width: 50%;
+        border-color: black;
+        border-width: 3px;
+        margin-bottom: 0;
+    }
+    div#quote hr {
+        width: 10%;
+        margin-bottom: 20px;
+    }
+
+    nav#secondaryNav {
+        display: inline-block;
+    }
+
+    nav#secondaryNav a {
+    	color: black;
+    	text-decoration: underline;
+    }
+
+    section#services {
+	    padding-bottom: 50px;
+    }
+
+    #psychometric .link a.get-started {
+    	display: none;
+    }
+    #therapy .link {
+    	margin-bottom: 20px;
+    }
+
+    section#whw {
+    	padding: 50px 0;
+    }    
+	section#whw .h1 {
+		font-size: 100px;
+	}
+	section#whw .h3 {
+		font-size: 35px;
+	}
+	section#whw p {
+		font-size: 20px;
+	}
+
+
+    /* Page 2 */
+    section#psychometric-about .h1 {
+    	font-size: 50px;
+    }
+    section#psychometric-about p:first-child {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    section#psychometric-about .h3 {
+    	margin-top: 50px;
+    	font-size: 40px;
+    }
+    section#psychometric-about p {
+    	font-size: 25px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+	section#admissions-about {
+		margin: 50px 0;
+	}
+	section#admissions-about .h1 {
+    	font-size: 50px;
+	}
+	section#admissions-about p {
+    	font-size: 25px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+	}
+	section#admissions-about .h3 {
+    	margin-top: 50px;
+    	font-size: 40px;
+	}
+	section#admissions-about ul#exams {
+    	margin-bottom: 50px;
+    	font-size: 30px;
+		padding: 0;
+	}
+
+    /* Common */
+    section#appointment {
+    	margin: 50px 0;
+    	padding: 30px 0;
+    }
+	section#appointment .h1 {
+        font-size: 30px;
+	}
+
+	section#appointment a.button {
+		float: left;
+		text-align: left;
+		font-size: 20px;
+		padding: 5px 10px;
+	}
+
+    #footer {
+    	padding: 20px 0;
+    	text-align: center;
+    }
+    #footer hr {
+    	width: 50%;
+    	margin: auto;
+    }
+}
+
+@media(min-width:768px) {
+	nav {
+		max-height: 100px;
+	}
+	nav#mainNav a {
+		color: black;
+	}
+	nav#mainNav.scrolled {
+		background-color: #000;
+		transition: background-color 200ms linear;
+	}
+	nav#mainNav.scrolled a {
+		color: #fff;
+	}
+	nav#mainNav.scrolled a:hover, nav#mainNav.scrolled a:focus {
+		color: black;
+	}
+    nav#mainNav {
+		padding: 20px 50px;
+	}
+    nav#mainNav ul {
+        width: 100%;
+    }
+    nav#mainNav li {
+        padding: 0 20px;
+    }
+	nav#mainNav .button {
+	    float: right;
+	}	
+    nav#mainNav .button > a {
+        background-color: rgb(192,192,192,0.6);
+    }
+    nav#mainNav .button > a:focus, nav#mainNav .button > a:hover {
+        background-color: rgb(255,255,255,1);
+    }
+
+    nav#secondaryNav {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav#secondaryNav li {
+        padding: 0 10px;
+    }
+    nav#secondaryNav a {
+    	color: black;
+    }
+
+    section#landing {
+        height: 100%;
+		padding-top: 100px;
+	}
+    section#landing .h1 {
+        font-size: 140px;
+    }
+    section#landing hr {
+        margin-top: 20px;
+        margin-bottom: 0;
+        width: 100%;
+        border-color: black;
+        border-width: 5px;
+    }
+	
+    div#quote {
+    	font-family: "Tamil MN - Bold",Arial,sans-serif;
+    	bottom: 0;
+		margin-top: 150px;
+    }
+    div#quote hr {
+        width: 10%;
+        margin-bottom: 20px;
+    }
+    div#quote h3 {
+        font-weight: 700;
+        font-size: 35px;
+    }
+    div#quote p {
+        font-size: 25px;
+    }
+
+	section#about .container {
+		width: 90%;
+		padding: 100px 0 0 0;
+	}
+	section#about img {
+		position: relative;
+		width: 400px;
+		z-index: 10;
+	}
+	section#about .row {
+		margin: 0;
+		padding: 0;
+	}
+	section#about #info {
+		text-align: justify;
+		margin: 50px 0 0 -10%;
+		padding: 0 0 20px 10%;
+		background-color: #fff;
+	}
+	section#about #info .h1 {
+		font-size: 120px;
+	}
+	section#about #info p {
+		padding: 0 10px;
+	}
+	section#about #desc {
+		margin: 10px 0px;
+	}
+	section#about #desc .col-md-6:first-child {
+		padding-left: 0;
+		border-right: solid #000;
+	}
+
+    section#services {
+	    padding-top: 50px;
+    }
+	section#services .container {
+		width: 90%;
+	}
+
+	section#services-links {
+		margin-top: 100px;
+		margin-bottom: 50px;
+	}
+    section#services-links .row {
+    	display: flex;
+    }
+    section#services-links .link {
+        margin: auto 0;
+        padding: 0 50px;
+    }
+    section#services-links p {
+    	margin-top: 30px;
+    	margin-bottom: 50px;
+	}
+    section#services-links a.get-started {
+		margin-top: 50px;
+		padding: 15px 30px;
+	}
+
+    section#whw .row {
+    	margin: 100px 0;
+    }
+	section#whw .col-md-7 {
+	    padding: 20px;
+	}
+	section#whw .h1 {
+		font-size: 150px;
+	}
+	section#whw .h3 {
+		font-size: 35px;
+	}
+	section#whw p {
+		font-size: 20px;
+	}
+
+	section#howitworks {
+		margin-top: 100px;
+	}
+	section#howitworks img {
+		width: 100%;
+	}
+
+    section#appointment {
+    	margin: 100px 0;
+    	padding: 20px 0;
+    }
+	section#appointment .h1 {
+        font-size: 50px;
+		line-height: 1.5;
+	}
+	section#appointment a.button {
+		font-size: 30px;
+		padding: 15px 25px;
+	}
+    
+    /* Page 2 */
+    #tests-page-top #mainNav a {
+		color: #fff;
+	}
+	#tests-page-top nav#mainNav a:hover, nav#mainNav a:focus {
+		color: black;
+	}
+	#tests-page-top nav#mainNav.scrolled {
+		background-color: #000;
+		transition: background-color 200ms linear;
+	}
+	#tests-page-top nav#mainNav.scrolled a {
+		color: #fff;
+	}
+	#tests-page-top nav#mainNav.scrolled a:hover, nav#mainNav.scrolled a:focus {
+		color: black;
+	}
+
+    section#psychometric-about {
+		padding-top: 50px;
+	}
+    section#psychometric-about .h1 {
+    	font-size: 50px;
+    }
+    section#psychometric-about p:first-child {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    section#psychometric-about .h3 {
+    	margin-top: 50px;
+    	font-size: 40px;
+    }
+    section#psychometric-about p {
+    	font-size: 25px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+	section#admissions-about {
+		margin-top: 50px;
+	}
+	section#admissions-about .h1 {
+    	font-size: 50px;
+	}
+	section#admissions-about p {
+    	font-size: 25px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+	}
+	section#admissions-about .h3 {
+    	margin-top: 50px;
+    	font-size: 40px;
+	}
+	section#admissions-about ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+    	margin-top: 30px;
+    	margin-bottom: 50px;
+    	font-size: 30px;
+	}
+
+    #footer {
+    	padding: 20px 0;
+    }
+    #footer hr {
+    	margin: 10px 0;
+    	width: 40%;
+    }
+    #footer ul {
+    	font-size: 20px;
+    }
+    #footer .h1{
+    	font-size: 30px;
+    }
+	#footer img {
+		margin: 30px 0;
+		width: 200px;
+	}
+	#footer #map {
+		margin-top: 50px;
+	}
 }

@@ -15,7 +15,16 @@
         }, 1250, 'easeInOutExpo');
         event.preventDefault();
     });
-
+	
+	//
+	
+	$(function () {
+	  $(document).scroll(function () {
+		  var $nav = $(".navbar-fixed-top");
+		  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+		});
+	});
+  
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
@@ -26,14 +35,6 @@
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });
-
-    // Fit Text Plugin for Main Header
-    $("h1").fitText(
-        1.2, {
-            minFontSize: '35px',
-            maxFontSize: '65px'
-        }
-    );
 
     // Offset for Main Navigation
     $('#mainNav').affix({
